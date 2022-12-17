@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Demo1 {
+    public static void main(String[] args) {
+	
+    	
+     int num,Ecount=0, Ocount=0;
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Enter the number of elements in array");
+     num=sc.nextInt();
+     int []sumEO=new int[num];
+     System.out.println("Enter the elements of the array:");
+     for(int i=0;i<num;i++)
+     {
+    	 sumEO[i]=sc.nextInt();
+     }
+     for(int i =0;i<num;i++)
+     {
+    	 if(sumEO[i] % 2 == 0)
+         {
+             Ecount = Ecount + sumEO[i];
+         }
+         else
+         {
+             Ocount= Ocount + sumEO[i];
+         }
+     }
+     System.out.println("Sum of Even Numbers:"+Ecount);
+     System.out.println("Sum of Odd Numbers:"+Ocount);
+     
+     sc.close();
+	}   
+}
